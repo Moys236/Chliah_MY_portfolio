@@ -92,7 +92,7 @@ const Navbar = () => {
                                 <a
                                     key={link.title}
                                     href={link.href}
-                                    onClick={() => setIsOpen(false)}
+                                    onClick={() => setTimeout(() => setIsOpen(false), 600)}
                                     className="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-gray-800"
                                 >
                                     {link.title}

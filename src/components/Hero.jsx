@@ -30,7 +30,7 @@ const Hero = () => {
 
                         {/* Typewriter "Mohamed Yassine" */}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 flex items-center">
-                            {"Mohamed Yassine".split("").map((char, index) => (
+                            {"CHLIAH Mohamed Yassine".split("").map((char, index) => (
                                 <motion.span
                                     key={index}
                                     initial={{ opacity: 0, display: "none" }}
