@@ -8,29 +8,34 @@
         "tech": [
             "Python",
             "Machine Learning",
-            "React",
+            "JavaScript",
             "API"
         ],
-        "links": {}
+        "img": "/Chliah_MY_portfolio/images/qualityControl.jpg",
+        "links": []
     },
     {
         "id": 2,
         "title": "Client Showcase Websites",
         "category": "Freelance",
-        "year": "2024",
+        "year": "2025",
         "description": "Designed and developed two modern showcase websites for local clients. Handled the entire lifecycle from design to deployment and hosting configuration.",
         "tech": [
-            "React",
-            "Tailwind CSS",
+            "HTML/CSS",
+            "JavaScript",
             "Hosting"
         ],
-        "links": {}
+        "img": "/Chliah_MY_portfolio/images/bubble_nassim.png",
+        "links": [
+            {"type": "Live Demo", "name": "nassim consulting",  "url": "https://nassimconsulting.nl/"},
+            {"type": "Live Demo", "name": "bubbleti.ma",   "url": "https://bubbleti.ma/"}
+        ]
     },
     {
         "id": 3,
         "title": "Custom CMS Platform",
         "category": "Freelance",
-        "year": "2024",
+        "year": "2025",
         "description": "Developed a dynamic website with a custom Content Management System (CMS) allowing the client to manage content easily. Optimized for performance and SEO.",
         "tech": [
             "PHP",
@@ -38,6 +43,7 @@
             "JavaScript",
             "HTML/CSS"
         ],
-        "links": {}
+        "img": "/Chliah_MY_portfolio/images/cmsSystem.png",
+        "links": []
     }
 ]

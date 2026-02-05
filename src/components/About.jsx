@@ -16,7 +16,7 @@ const About = () => {
                         About Me
                     </h2>
                     <p className="text-lg text-gray-400 max-w-3xl leading-relaxed">
-                        I am a <span className="text-blue-400 font-semibold">Full-Stack Digital Development intern (Excellence Class)</span>, passionate about web development and modern technologies.
+                        I am a <span className="text-blue-400 font-semibold">Full-Stack Digital Development intern</span>, passionate about web development and modern technologies.
                         Motivated, detail-oriented, and solution-driven, I am looking for opportunities to apply my technical skills and grow in a professional environment.
                     </p>
                 </motion.div>

@@ -4,6 +4,10 @@ import { FaGithub, FaExternalLinkAlt, FaCode } from 'react-icons/fa';
 import projectsData from '../data/projects.json';
 
 const Projects = () => {
+    const linkIcons = {
+        "GitHub": <FaGithub />,
+        "Live Demo": <FaExternalLinkAlt />
+    };
     return (
         <section id="projects" className="py-20 bg-[#0d1117] text-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,8 +35,14 @@ const Projects = () => {
                         >
                             {/* Project Image Placeholder - using gradient/pattern if no image */}
                             <div className="h-48 bg-gradient-to-br from-gray-800 to-gray-900 group-hover:from-gray-800 group-hover:to-green-900/20 transition-colors flex items-center justify-center relative overflow-hidden">
-                                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-                                <FaCode className="text-5xl text-gray-700 group-hover:text-green-500/50 transition-colors transform group-hover:scale-110 duration-500" />
+                                {project.img ? (
+                                    <img src={project.img} alt="" className="w-full h-full object-cover" />
+                                ) : (
+                                    <div>
+                                        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+                                        <FaCode className="text-5xl text-gray-700 group-hover:text-green-500/50 transition-colors transform group-hover:scale-110 duration-500" />
+                                    </div>
+                                )}
                                 <div className="absolute top-4 right-4 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full text-xs text-green-400 font-mono border border-green-500/30">
                                     {project.category}
                                 </div>
@@ -56,14 +66,23 @@ const Projects = () => {
                                     ))}
                                 </div>
 
-                                <div className="flex gap-4 pt-4 border-t border-gray-800 mt-auto">
-                                    <button className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
-                                        <FaGithub /> Code
-                                    </button>
-                                    <button className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors">
-                                        <FaExternalLinkAlt /> Live Demo
-                                    </button>
-                                </div>
+                                {project.links.length !== 0 && (
+                                    <div className="flex gap-4 pt-4 border-t border-gray-800 mt-auto">
+                                        {project.links.map((link, i) => (
+                                            <a
+                                                key={i}
+                                                href={link.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors"
+                                            >
+                                                {linkIcons[link.type]} {link.name}
+                                            </a>
+
+                                        )
+                                        )}
+                                    </div>
+                                )}
                             </div>
                         </motion.div>
                     ))}

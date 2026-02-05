@@ -8,7 +8,7 @@ const Experience = () => {
             id: 1,
             degree: "Digital Development – Full-Stack (2nd year)",
             school: "CMC – Tangier",
-            period: "2024 – 2026",
+            period: "2024 – Present",
             details: "Excellence Class"
         },
         {
