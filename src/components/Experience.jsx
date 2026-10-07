@@ -94,7 +94,7 @@ const Experience = () => {
                     <div>
                         <div className="flex items-center gap-3 mb-8">
                             <FaGraduationCap className="text-3xl text-pink-500" />
-                            <h3 className="text-2xl font-bold">Education</h3>
+                            <h3 className="text-2xl font-bold">Education & Certifications</h3>
                         </div>
                         <div className="space-y-8 border-l-2 border-gray-800 ml-3 pl-8 relative">
                             {education.map((edu) => (
