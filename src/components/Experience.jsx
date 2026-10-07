@@ -6,13 +6,20 @@ const Experience = () => {
     const education = [
         {
             id: 1,
-            degree: "Digital Development – Full-Stack (2nd year)",
+            degree: "Digital Development – Full-Stack",
             school: "CMC – Tangier",
             period: "2024 – 2026",
             details: "Excellence Class"
         },
         {
             id: 2,
+            degree: "PIE Certificate – Programme d'Innovation et d'Entrepreneuriat",
+            school: "CMC – Tangier",
+            period: "2025 – 2026",
+            details: ""
+        },
+        {
+            id: 3,
             degree: "Baccalaureate in Physical Sciences (French option)",
             school: "Lycée Abdelmoumen El Mouahidi – Tangier",
             period: "2023",
