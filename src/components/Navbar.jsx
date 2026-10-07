@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { FaBars, FaTimes, FaGithub, FaLinkedin } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
+    const navbarRef = useRef(null);
+
+    useEffect(() => {
+        if (!isOpen) return undefined;
+
+        const handleOutsideClick = (event) => {
+            if (!navbarRef.current?.contains(event.target)) {
+                setIsOpen(false);
+            }
+        };
+
+        document.addEventListener('pointerdown', handleOutsideClick);
+        return () => document.removeEventListener('pointerdown', handleOutsideClick);
+    }, [isOpen]);
 
     const navLinks = [
         { title: 'About', href: '#about' },
@@ -15,11 +29,11 @@ const Navbar = () => {
 
     const socialLinks = [
         { icon: <FaLinkedin size={20} />, href: 'https://www.linkedin.com/in/mohamed-yassine-chliah-24679733b/' },
-        { icon: <FaGithub size={20} />, href: 'https://github.com' }, // GitHub placeholder or if provided
+        { icon: <FaGithub size={20} />, href: 'https://github.com/Moys236' },
     ];
 
     return (
-        <nav className="fixed w-full z-50 bg-[#0d1117]/90 backdrop-blur-md border-b border-gray-800">
+        <nav ref={navbarRef} className="fixed w-full z-50 bg-[#0d1117]/90 backdrop-blur-md border-b border-gray-800">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between h-16">
                     <motion.div
@@ -28,7 +42,7 @@ const Navbar = () => {
                         className="flex-shrink-0 cursor-pointer"
                     >
                         <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
-                            MOYSIN CH
+                            MOYSIN CHLIAH
                         </h1>
                     </motion.div>
 
@@ -71,6 +85,8 @@ const Navbar = () => {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="text-gray-300 hover:text-white focus:outline-none p-2"
+                            aria-expanded={isOpen}
+                            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
                         >
                             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
                         </button>

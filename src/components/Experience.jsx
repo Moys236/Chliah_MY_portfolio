@@ -8,7 +8,7 @@ const Experience = () => {
             id: 1,
             degree: "Digital Development – Full-Stack (2nd year)",
             school: "CMC – Tangier",
-            period: "2024 – Present",
+            period: "2024 – 2026",
             details: "Excellence Class"
         },
         {
@@ -34,12 +34,36 @@ const Experience = () => {
         },
         {
             id: 2,
-            role: "Academic Project: Quality Control System",
+            role: "Fablab Project: Quality Control System",
             company: "CMC Tangier",
             period: "2025",
             description: [
                 "Built a quality control system based on image recognition.",
                 "Integrated the ML model into a functional application."
+            ]
+        },
+        {
+            id: 3,
+            role: "End-of-Training Project: Schedio, School Timetable Management",
+            company: "CMC Tangier",
+            period: "2025 - 2026",
+            description: [
+                "Developed a school timetable management platform, live in production at schedio.ma.",
+                "Built the application with Laravel and React, with real-time updates via WebSockets (Laravel Reverb) and Redis-backed queues.",
+                "Integrated a Python solver for automated scheduling and designed rules for exam session planning, including conflict detection and room reassignment.",
+                "Implemented email notifications to keep users informed of updates that concern them.",
+                "Containerized the stack with Docker and deployed it on a server using Git, GitHub, and SSH."
+            ]
+        },
+        {
+            id: 4,
+            role: "Web Development Internship",
+            company: "Hostino",
+            period: "May - June 2026",
+            description: [
+                "Developed websites using Astro JS, within the company's development teams.",
+                "Collaborated with developers on real client projects under the guidance of the supervisors.",
+                "Gained hands-on experience with a modern web workflow in a professional environment."
             ]
         }
     ];

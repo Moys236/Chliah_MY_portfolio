@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FaHtml5, FaCss3Alt, FaJs, FaPhp, FaReact, FaDatabase, FaGitAlt, FaGithub, FaGitlab, FaJira, FaServer, FaLaravel } from 'react-icons/fa';
-import { SiMysql, SiMongodb, SiSonarqube } from 'react-icons/si';
+import { SiAstro, SiDocker, SiMysql, SiMongodb, SiSonarqube } from 'react-icons/si';
 
 const Skills = () => {
     const skillCategories = [
@@ -11,6 +11,7 @@ const Skills = () => {
                 { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
                 { name: "CSS3", icon: <FaCss3Alt className="text-blue-500" /> },
                 { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
+                { name: "Astro JS", icon: <SiAstro className="text-orange-400" /> },
                 { name: "PHP", icon: <FaPhp className="text-indigo-400" /> },
                 { name: "React", icon: <FaReact className="text-blue-400" /> },
                 { name: "Laravel", icon: <FaLaravel className="text-red-600" /> },
@@ -31,6 +32,7 @@ const Skills = () => {
                 { name: "GitLab", icon: <FaGitlab className="text-orange-400" /> },
                 { name: "Jira", icon: <FaJira className="text-blue-500" /> },
                 { name: "SonarQube", icon: <SiSonarqube className="text-blue-400" /> },
+                { name: "Docker", icon: <SiDocker className="text-blue-400" /> },
             ]
         },
         {

@@ -45,5 +45,34 @@
         ],
         "img": "/Chliah_MY_portfolio/images/cmsSystem.png",
         "links": []
+    },
+    {
+        "id": 4,
+        "title": "Schedio",
+        "category": "End-of-Training Project",
+        "year": "2025 - 2026",
+        "description": "Developed a school timetable management platform with real-time updates, automated schedule generation, and exam planning with conflict detection and room reassignment.",
+        "tech": [
+            "Laravel",
+            "React",
+            "WebSockets",
+            "Redis",
+            "Python",
+            "Docker"
+        ],
+        "img": "/Chliah_MY_portfolio/images/schedio.jpg",
+        "gallery": [
+            "/Chliah_MY_portfolio/images/imgs-schedio/1783691884464.jpg",
+            "/Chliah_MY_portfolio/images/imgs-schedio/1783691887370.jpg",
+            "/Chliah_MY_portfolio/images/imgs-schedio/1783691886655.jpg",
+            "/Chliah_MY_portfolio/images/schedio.jpg",
+            "/Chliah_MY_portfolio/images/imgs-schedio/1783691883788.jpg",
+            "/Chliah_MY_portfolio/images/imgs-schedio/1783691885012.jpg",
+            "/Chliah_MY_portfolio/images/imgs-schedio/1783691886092.jpg",
+            "/Chliah_MY_portfolio/images/imgs-schedio/1783691886187.jpg"
+        ],
+        "links": [
+            {"type": "Live Demo", "name": "schedio.ma", "url": "https://schedio.ma/"}
+        ]
     }
 ]

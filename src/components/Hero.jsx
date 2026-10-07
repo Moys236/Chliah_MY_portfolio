@@ -18,7 +18,7 @@ const Hero = () => {
                     <span className="text-blue-400 font-semibold tracking-wide uppercase text-sm mb-4 block">
                         Welcome to my portfolio
                     </span>
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight min-h-[1.2em] flex flex-wrap justify-center gap-x-2 md:gap-x-4">
+                    <h1 className="text-4xl max-[440px]:text-3xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight min-h-[1.2em] flex flex-wrap justify-center gap-x-2 md:gap-x-4">
                         {/* Static "Hi, I'm" */}
                         <motion.span
                             initial={{ opacity: 0 }}
@@ -28,17 +28,21 @@ const Hero = () => {
                             Hi, I'm
                         </motion.span>
 
-                        {/* Typewriter "Mohamed Yassine" */}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 flex items-center">
-                            {"CHLIAH Mohamed Yassine".split("").map((char, index) => (
-                                <motion.span
-                                    key={index}
-                                    initial={{ opacity: 0, display: "none" }}
-                                    animate={{ opacity: 1, display: "inline" }}
-                                    transition={{ delay: 0.5 + index * 0.1 }}
-                                >
-                                    {char === " " ? "\u00A0" : char}
-                                </motion.span>
+                        {/* Typewriter name */}
+                        <span className="inline-flex flex-wrap items-center justify-center gap-x-2 max-[440px]:basis-full">
+                            {["CHLIAH", "Mohamed", "Yassine"].map((word) => (
+                                <span key={word} className="inline-flex whitespace-nowrap text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500">
+                                    {word.split("").map((char, index) => (
+                                        <motion.span
+                                            key={`${word}-${index}`}
+                                            initial={{ opacity: 0, display: "none" }}
+                                            animate={{ opacity: 1, display: "inline" }}
+                                            transition={{ delay: 0.5 + ("CHLIAH Mohamed Yassine".indexOf(word) + index) * 0.1 }}
+                                        >
+                                            {char}
+                                        </motion.span>
+                                    ))}
+                                </span>
                             ))}
                             {/* Blinking Cursor */}
                             <motion.span
@@ -49,8 +53,8 @@ const Hero = () => {
                             />
                         </span>
                     </h1>
-                    <h2 className="text-xl md:text-2xl text-gray-400 mb-8 max-w-2xl mx-auto">
-                        Full-Stack Developer Intern & Digital Development Student.
+                    <h2 className="text-base min-[440px]:text-xl md:text-2xl leading-relaxed text-gray-400 mb-8 max-w-xl mx-auto px-2 sm:px-0">
+                        Full-Stack Developer & Digital Development Student.
                         <br className="hidden md:block" />
                         Passionate about building modern web solutions.
                     </h2>
@@ -73,6 +77,13 @@ const Hero = () => {
                         className="px-8 py-3 rounded-full border border-gray-600 hover:border-blue-400 text-gray-300 hover:text-blue-400 font-medium flex items-center gap-2 transition-all hover:scale-105 backdrop-blur-sm"
                     >
                         Contact Me
+                    </a>
+                    <a
+                        href={`${import.meta.env.BASE_URL}docs/CV_Mohamed_Yassine_CHLIAH_Developpement_Digital.pdf`}
+                        download
+                        className="px-8 py-3 rounded-full border border-purple-500/60 hover:border-purple-400 bg-purple-500/10 hover:bg-purple-500/20 text-purple-300 hover:text-purple-200 font-medium flex items-center gap-2 transition-all hover:scale-105 backdrop-blur-sm"
+                    >
+                        Download CV <FaDownload size={14} />
                     </a>
                 </motion.div>
 

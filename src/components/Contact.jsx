@@ -14,7 +14,7 @@ const Contact = () => {
                 >
                     <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
                     <p className="text-gray-400">
-                        I am currently looking for an internship or job opportunity.
+                        I am currently looking for a job opportunity.
                         Whether you have a question or just want to say hi, feel free to contact me!
                     </p>
                 </motion.div>
